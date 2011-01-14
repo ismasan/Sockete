@@ -1,0 +1,14 @@
+target_dir './dist'
+
+src_dir './src'
+
+version '0.0.1'
+
+bundle 'mock_websocket.js' do
+  license 'license.txt'
+  file 'mock_websocket.js'
+end
+
+filter do |src, config|
+  src.gsub! /<VERSION>/, config.version
+end

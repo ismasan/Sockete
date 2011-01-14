@@ -1,0 +1,5 @@
+/*  mock_websocket.js, version <VERSION>
+*  (c) 2011 Ismael Celis (@ismasan)
+*
+*  Released under MIT license.
+*/

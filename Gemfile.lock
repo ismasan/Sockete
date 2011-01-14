@@ -1,0 +1,12 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    closure-compiler (0.3.3)
+    jbundle (0.0.4)
+      closure-compiler
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  jbundle
