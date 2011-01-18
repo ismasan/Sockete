@@ -31,8 +31,10 @@
     }
     
     this.send = function (msg) {
+      if(this.readyState != 1) return false;
       var request = new Sockete.Request(self, 'message', msg);
       self.__server.request(request, dispatch);
+      return true;
     }
     
     function readyState (state) {
