@@ -2,6 +2,7 @@
   
   // WebSocket mock. It is important that it implements the same API and public attributes
   // so we only add those to the prototype.
+  Sockete.clients = [];
   
   Sockete.Client = function (url) {
     
@@ -56,7 +57,10 @@
       var request = new Sockete.Request(self, 'open')
       self.__server.request(request, dispatch);
     }
-    setTimeout(connect, Sockete.settings.connecttion_delay)
+    setTimeout(connect, Sockete.settings.connecttion_delay);
+    
+    Sockete.clients.push(this);
+    this.__sockete_id = Sockete.clients.length;
   }
   
   
