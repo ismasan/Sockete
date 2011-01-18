@@ -58,3 +58,4 @@ Commit and push.
 
 - Be able to inspect message history on both server and client (kinda the point of this library)
 - Tokenized server URLs and messages, so we can test query variable strings, etc.
+- Be able to facading native Websocket (instead of completely replacing) so we can use with real server while maintaining history and testing capabilities (cool fo running integration tests?)
