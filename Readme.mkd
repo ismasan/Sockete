@@ -1,0 +1,60 @@
+## The point
+
+As a websockets client developer
+
+I want to mock the WebSocket object
+
+So I can simulate on the browser interaction with a websockets server
+And inspect a log of sent and received messages
+And test my client code without the need to setup actual server logic.
+
+## The gist
+
+    var fail_server = Sockete.Server.configure('ws://fake.host', function () {
+      
+      this.onmessage('blah').respond('Ok buddy!');
+      
+      this.onmessage('Wrong message').fail('So sorry');
+      
+      // this.onconnect().fail('Nope!')
+    });
+    
+    // Replace native window.WebSocket with Sockete.Client
+    
+    Sockete.mock();
+    
+    var socket = new WebSocket('ws://fake.host');
+    
+    socket.readyState // => 1 (CONNECTED)
+    
+    socket.onmessage = function (evt) {
+      console.log(evt.data)
+    }
+    
+    socket.send('blah'); // => logs 'Ok buddy!'
+    
+    socket.send('Wrong message'); // => closes connection and fires socket.onclose()
+
+
+## Install
+
+    git pull
+    bundle install
+    
+## Test
+
+    ruby test/app.rb
+    open test/index.html
+
+## Release
+
+Change version in ./Jfile and build distribution with
+
+    jbundle
+    
+Commit and push.
+
+## TODO
+
+- Be able to inspect message history on both server and client (kinda the point of this library)
+- Tokenized server URLs and messages, so we can test query variable strings, etc.

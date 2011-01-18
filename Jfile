@@ -4,9 +4,14 @@ src_dir './src'
 
 version '0.0.1'
 
-bundle 'mock_websocket.js' do
+bundle 'sockete.js' do
   license 'license.txt'
-  file 'mock_websocket.js'
+  file 'sockete.js'
+  file 'request.js'
+  file 'response.js'
+  file 'client.js'
+  file 'responder.js'
+  file 'server.js'
 end
 
 filter do |src, config|
