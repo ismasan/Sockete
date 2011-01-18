@@ -10,7 +10,7 @@ And test my client code without the need to setup actual server logic.
 
 ## The gist
 
-    var fail_server = Sockete.Server.configure('ws://fake.host', function () {
+    Sockete.Server.configure('ws://fake.host', function () {
       
       this.onmessage('blah').respond('Ok buddy!');
       
