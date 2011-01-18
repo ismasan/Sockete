@@ -4,9 +4,11 @@ As a websockets client developer
 
 I want to mock the WebSocket object
 
-So I can simulate on the browser interaction with a websockets server
+So I can simulate interaction with a websockets server on the browser
+
 And inspect a log of sent and received messages
-And test my client code without the need to setup actual server logic.
+
+And test my client code without the need to setup an actual WebSockets server.
 
 ## The gist
 
