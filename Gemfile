@@ -2,4 +2,4 @@
 source "http://rubygems.org"
 
 gem 'sinatra'
-gem 'jbundle'
+gem 'jbundle', '>= 0.0.5'

@@ -2,7 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     closure-compiler (0.3.3)
-    jbundle (0.0.4)
+    jbundle (0.0.5)
       closure-compiler
     rack (1.2.1)
     sinatra (1.0)
@@ -12,5 +12,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jbundle
+  jbundle (>= 0.0.5)
   sinatra

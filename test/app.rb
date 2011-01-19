@@ -4,7 +4,7 @@ require 'sinatra'
 require 'jbundle'
 
 before do
-  JBundle.config.instance_eval File.read(File.dirname(__FILE__) + '/../Jfile')
+  JBundle.config_from_file File.dirname(__FILE__) + '/../Jfile'
 end
 
 get '/bundle.js' do
