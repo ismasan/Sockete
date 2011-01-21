@@ -15,5 +15,5 @@ bundle 'sockete.js' do
 end
 
 filter do |src, config|
-  src.gsub! /<VERSION>/, config.version
+  src.gsub! /<VERSION>/, config.version.to_s
 end
