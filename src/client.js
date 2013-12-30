@@ -57,7 +57,7 @@
       var request = new Sockete.Request(self, 'open')
       self.__server.request(request, dispatch);
     }
-    setTimeout(connect, Sockete.settings.connecttion_delay);
+    setTimeout(connect, Sockete.settings.connection_delay);
     
     Sockete.clients.push(this);
     this.__sockete_id = Sockete.clients.length;
