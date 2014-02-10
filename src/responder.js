@@ -52,7 +52,11 @@
     },
     
     response: function (client) {
-      return new Sockete.Response(client, this.__response_type, this.__response_message);
+	  if (typeof this.__response_message === 'function') {
+	    return new Sockete.Response(client, this.__response_type, this.__response_message());
+	  } else {
+        return new Sockete.Response(client, this.__response_type, this.__response_message);
+	  }
     }
   }
   
