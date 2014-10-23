@@ -1,3 +1,8 @@
+## Disclaimer: this library will not be further maintained.
+
+Feel free to fork it and resucitate it. I'll link through to your version if you do.
+
+
 ## The point
 
 As a websockets client developer
